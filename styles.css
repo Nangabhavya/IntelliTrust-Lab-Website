@@ -23,20 +23,21 @@ body {
     padding: 20px;
 }
 
-header {
-    background-color: #333;
-    color: #ffffff;
-    padding: 20px 0;
-    border-bottom-left-radius: 15px; /* Curved edge on bottom left */
-    border-bottom-right-radius: 15px; /* Curved edge on bottom right */
-}
-
 header h1 {
     text-align: center;
     font-size: 2.8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 10px;
+}
+
+header {
+    background-color: #333;
+    color: #ffffff;
+    padding: 20px 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 100%; /* Ensure the header spans the full width of the page */
 }
 
 nav {
@@ -48,12 +49,15 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     padding: 0;
+    margin: 0;
+    white-space: nowrap; /* Prevent line breaks in the nav items */
+    max-width: 90%; /* Adjust to fit within the available width */
+    margin: 0 auto; /* Center the nav items */
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 0 5px; /* Reduce the space between nav items */
 }
 
 nav ul li a {
@@ -61,15 +65,17 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 600;
-    padding: 5px 10px;
+    padding: 5px 8px; /* Slightly reduce padding to fit more items */
     transition: background-color 0.3s ease;
     display: inline-block;
     border-radius: 10px;
+    white-space: nowrap; /* Ensure the text within the tabs doesn't wrap */
 }
 
 nav ul li a:hover {
     background-color: #555;
 }
+
 
 main {
     padding: 40px 0;
@@ -322,4 +328,54 @@ footer p {
     .graduate-students {
         flex-direction: column;
     }
+
+    /* Profile Page Specific Styling */
+    .profile-container {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 50px;
+    }
+
+    .profile-left {
+        width: 30%;
+        text-align: center;
+        margin-right: 20px;
+    }
+
+    .profile-pic {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    .profile-links a {
+        display: block;
+        margin-bottom: 10px;
+        color: #333;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+    }
+
+    .profile-links a:hover {
+        color: #f3b23c;
+    }
+
+    .profile-right {
+        width: 70%;
+    }
+
+    .profile-right h2 {
+        font-size: 2.4rem;
+        margin-bottom: 20px;
+    }
+
+    .profile-right p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #555;
+    }
+
 }

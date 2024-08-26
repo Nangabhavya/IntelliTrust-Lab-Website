@@ -188,7 +188,7 @@ main ul li img {
     height: 8rem;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .principal-investigator p {
@@ -204,6 +204,10 @@ main ul li img {
     font-size: 1.8rem;
     text-align: center;
     color: #333;
+    border-bottom: 2px solid #f3b23c; /* Add a bottom border for the underline */
+    padding-bottom: 5px; /* Add some space between the text and the underline */
+    display: inline-block; /* Ensure the underline only spans the width of the text */
+    margin-bottom: 20px; /* Adjust the space below the heading */
 }
 
 .graduate-students {
@@ -277,6 +281,103 @@ footer p {
     display: block;
 }
 
+#search-bar {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+#search-bar button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#search-bar button:hover {
+    background-color: #555;
+}
+
+.year-section h3 {
+    border-bottom: 2px solid #f3b23c;
+    padding-bottom: 10px;
+    margin-top: 40px; /* Adjust this value to control space above the year heading */
+    margin-bottom: 20px; /* Adjust this value to control space below the year heading */
+}
+
+.year-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.year-section li {
+    margin-bottom: 20px;
+}
+
+.year-section li a {
+    font-size: 1.2rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.year-section li a:hover {
+    text-decoration: underline;
+}
+
+.year-section li span {
+    display: block;
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Container for each publication box */
+/* Container for each publication box */
+.publication-box {
+    background-color: #f9f9f9; /* Light background for the box */
+    padding: 20px;
+    margin-top: 20px; /* Add space between the year heading and the box */
+    margin-bottom: 20px; /* Space between consecutive boxes */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-left: 4px solid #007bff; /* Add a left border to match the link color */
+}
+
+.publication-title {
+    font-size: 1.2rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.publication-title:hover {
+    text-decoration: underline;
+}
+
+.authors {
+    display: block;
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 5px; /* Reduced space between authors and the journal info */
+}
+
+.journal-info {
+    display: block;
+    color: #555;
+    font-size: 0.9rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
@@ -342,26 +443,39 @@ footer p {
         margin-right: 20px;
     }
 
-    .profile-pic {
-        width: 100%;
-        height: auto;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 20px;
-    }
+    .profile-left img.profile-pic {
+        width: 150px !important;  
+        height: 150px !important; 
+        border-radius: 50% !important; 
+        object-fit: cover !important; 
+        margin-bottom: 20px !important;
+    }    
+    
 
     .profile-links a {
-        display: block;
-        margin-bottom: 10px;
-        color: #333;
-        text-decoration: none;
-        font-size: 1.2rem;
-        transition: color 0.3s ease;
+        display: inline-block;
+        margin-right: 30px; /* Increase space between icons */
+        text-decoration: none; /* Ensure no underline */
+        color: inherit; /* Ensure icons inherit the text color */
     }
-
-    .profile-links a:hover {
-        color: #f3b23c;
+    
+    .profile-links a svg {
+        width: 24px;
+        height: 24px;
+        fill: #333;
+        transition: fill 0.3s ease;
+        vertical-align: middle; /* Align the icons properly */
     }
+    
+    .profile-links a:last-child {
+        margin-right: 0; /* Remove margin from the last icon */
+    }    
+    
+    
+    .profile-links a:hover svg {
+        fill: #f3b23c;
+    }
+    
 
     .profile-right {
         width: 70%;

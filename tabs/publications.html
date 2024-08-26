@@ -12,7 +12,7 @@
             <h1>IntelliTrust Lab</h1>
             <nav>
                 <ul>
-                    <li><a href="../Web.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="mission.html">Mission Statement</a></li>
                     <li><a href="research.html">Research Areas</a></li>
                     <li><a href="publications.html">Publications</a></li>
@@ -70,7 +70,7 @@
                             <span class="journal-info">Theoretical Computer Science (TCS), 09 Jan 2023</span><br>
                             <span class="field-info">[Efficient AI]</span>
                         </div>
-                    </div>  
+                    </div>
                     <!-- Add more year sections and publications as needed -->
                     <div class="year-section" id="2022">
                         <h3>2022</h3>
@@ -114,7 +114,7 @@
                             <span class="field-info">[Trustworthy AI, Generative AI, IoT]</span>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
         </section>
     </main>
@@ -130,7 +130,7 @@
             const input = document.getElementById('search-input').value.toLowerCase();
             const yearSections = document.querySelectorAll('.year-section');
             let found = false;
-    
+
             // If the search input is empty, show all publications
             if (input === "") {
                 yearSections.forEach((section) => {
@@ -142,11 +142,11 @@
                 });
                 return; // Exit the function
             }
-    
+
             yearSections.forEach((section) => {
                 const publications = section.querySelectorAll('.publication-box');
                 let yearHasMatch = false;
-    
+
                 publications.forEach((pub) => {
                     const text = pub.textContent.toLowerCase();
                     if (text.includes(input)) {
@@ -157,18 +157,18 @@
                         pub.style.display = 'none';
                     }
                 });
-    
+
                 if (yearHasMatch) {
                     section.style.display = 'block';
                 } else {
                     section.style.display = 'none';
                 }
             });
-    
+
             if (!found) {
                 document.getElementById('publications-list').innerHTML = "<p>No references found</p>";
             }
         }
-    </script>    
+    </script>
 </body>
 </html>

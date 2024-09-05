@@ -7,29 +7,102 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/3paNdF+Meqs2RhU6q0PvE3pGh5zGAO" crossorigin="anonymous">
     <style>
-        /* Adjust the container to relative positioning */
-        header .container {
+        /* General Header Styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
             position: relative;
         }
 
-        /* Logo styling */
+        header h1 {
+            margin: 0;
+            color: white;
+            font-size: 28px;
+        }
+
+        /* Logo Styling */
         .logo {
             position: absolute;
-            top: 10px; /* Adjust this value as needed */
-            right: 17px; /* Position it to the right */
-            width: 100px; /* Adjust the width as needed */
-            height: auto; /* Keep the aspect ratio */
-            z-index: 1000; 
-            background: transparent; /* Ensure the logo appears above other content */
+            top: 10px;
+            right: 10px;
+            width: 250px; /* Increased logo size */
+            height: 170px;
         }
+
+        /* Navigation Menu Styling */
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Main Content Styling */
+        main {
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Section Styling */
+        section h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        section p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Summary Blocks */
+        .summary {
+            margin: 20px 0;
+        }
+
+        .summary h3 {
+            margin: 10px 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .summary p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Footer Styling */
+        footer {
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <h1>IntelliTrust Lab</h1>
-            <!-- Add the logo with the correct class -->
-            <img src="C:/Users/bhavy/OneDrive/Pictures/Screenshots/Screenshot 2024-09-03 210531.png" alt="IntelliTrust Lab Logo" class="logo">
+            <!-- Larger logo on the right side -->
+            <img src="C:\Users\bhavy\Downloads\photo.jpg"alt="IntelliTrust Lab Logo" class="logo">
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
